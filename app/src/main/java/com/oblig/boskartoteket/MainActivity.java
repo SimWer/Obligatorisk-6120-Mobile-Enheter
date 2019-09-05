@@ -8,6 +8,7 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 import android.widget.Toolbar;
@@ -15,8 +16,9 @@ import android.widget.Toolbar;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.bottomnavigation.LabelVisibilityMode;
 
-public class MainActivity extends AppCompatActivity{
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
     private EditText user_input, password_input;
+    private Button login_button;
     private BottomNavigationView bottomView;
 
     @Override
@@ -24,9 +26,18 @@ public class MainActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_main);
+        getSupportActionBar().hide();
         user_input = findViewById(R.id.email_input);
         password_input = findViewById(R.id.password_input);
+        login_button = findViewById(R.id.login_button);
 
     }
 
+    @Override
+    public void onClick(View view) {
+        if(view.getId() == R.id.login_button) {
+            login_button.setText(R.string.buy_text);
+        }
+
+    }
 }

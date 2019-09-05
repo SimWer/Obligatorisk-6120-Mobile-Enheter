@@ -4,6 +4,8 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
@@ -37,6 +39,21 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     public void onClick(View view) {
         if(view.getId() == R.id.login_button) {
             login_button.setText(R.string.buy_text);
+        }
+
+    }
+
+    public void log_in_user(View view) {
+        Resources res = getResources();
+        String[] user = res.getStringArray(R.array.user_simon);
+
+        if(user_input.getText().toString().equals(user[0]) && password_input.getText().toString().equals(user[1])) {
+            Toast.makeText(getApplicationContext(),user_input.getText(),Toast.LENGTH_SHORT).show();
+
+            Intent startIntent = new Intent(this, LoggedIn.class);
+            startActivity(startIntent);
+        } else {
+            Toast.makeText(getApplicationContext(),user_input.getText().toString() + user[0],Toast.LENGTH_SHORT).show();
         }
 
     }

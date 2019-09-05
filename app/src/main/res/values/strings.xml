@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Boskartoteket</string>
+    <string name="login_button_text">Login</string>
+    <string name="har_du_ikke_en_bruker">Har du ikke en bruker?</string>
+    <string name="make_user">Lag en bruker</string>
+    <string name="only_show_dates">Jeg vil bare se tømmedatoer</string>
+    <string name="username_hint">E-post</string>
+    <string name="password_hint">Passord</string>
 </resources>

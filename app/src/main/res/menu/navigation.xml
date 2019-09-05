@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_dates"
+        android:enabled="true"
+        android:icon="@drawable/ic_date_menu"
+        android:title="@string/datoer_string"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_shopping_cart"
+        android:enabled="true"
+        android:icon="@drawable/ic_shopping_cart"
+        android:title="@string/buy_text"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_settings"
+        android:enabled="true"
+        android:icon="@drawable/ic_person"
+        android:title="@string/settings_menu_text"
+        app:showAsAction="ifRoom" />
+</menu>

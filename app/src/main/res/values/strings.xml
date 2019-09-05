@@ -7,4 +7,8 @@
     <string name="username_hint">E-post</string>
     <string name="password_hint">Passord</string>
     <string name="boskartoteket_title">Boskartoteket</string>
+    <string name="forgotten_password_text">Har du glemt passordet?</string>
+    <string name="datoer_string">Datoer</string>
+    <string name="buy_text">Kjøp</string>
+    <string name="settings_menu_text">Settings</string>
 </resources>

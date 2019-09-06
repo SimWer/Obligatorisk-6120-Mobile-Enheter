@@ -11,4 +11,16 @@
     <string name="datoer_string">Datoer</string>
     <string name="buy_text">Kjøp</string>
     <string name="settings_menu_text">Settings</string>
+    <string name="user_full_name_text">Simon Wernersson</string>
+    <string name="more_bags_text">Trenger du ekstra poser</string>
+    <string name="user_address">Uvdalvegen 176</string>
+    <string name="waste_category_text">Våtorganisk avfall</string>
+    <string name="next_pickup_text">Neste Tømmedag</string>
+    <string name="pickup_date_text">Fredag 10 Mai</string>
+    <string name="nr_of_days_text">11 Dager Til</string>
+    <string name="mat_text_on_off">Mat</string>
+    <string name="papp_text_on_off">Papp</string>
+    <string name="rest_text_on_off">Rest</string>
+    <string name="plast_text_on_off">Plast</string>
+    <string name="farleg_text_on_off">Farleg</string>
 </resources>

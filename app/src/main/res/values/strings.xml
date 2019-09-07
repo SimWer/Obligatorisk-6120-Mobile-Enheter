@@ -23,4 +23,25 @@
     <string name="rest_text_on_off">Rest</string>
     <string name="plast_text_on_off">Plast</string>
     <string name="farleg_text_on_off">Farleg</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bestilling_title">Bestill Posar</string>
+    <string name="bestilling_info_text">Her kan du bestille posar og diverse bos-artikler</string>
+    <string name="artikler_title">Tilgjengelege artiklar</string>
+    <string name="matavfall_title">Pose - Matavfall</string>
+    <string name="waste_organic">Våtorganisk Avfall</string>
+    <string name="currency">NOK:</string>
+    <string name="price">19.90</string>
+    <string name="add_button_text">Legg til kurv</string>
+    <string name="plastic_title">Pose - Plastavfall</string>
+    <string name="waste_plastic">plastemballasje</string>
+    <string name="restwaste_title">Pose - Restavfall</string>
+    <string name="waste_rest">restavfall</string>
+    <string name="bin_title">Beholder - Plastdunk</string>
+    <string name="bin_price">299.90</string>
+    <string name="shopping_cart">Handlekurv</string>
+    <string name="total_price_text">Total sum: NOK</string>
+    <string name="nr_of_products_text">Tal på produktar:</string>
+    <string name="order_button_text">Bestill Varene</string>
 </resources>

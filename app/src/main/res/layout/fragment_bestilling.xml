@@ -135,7 +135,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_button_green"
-                    android:text="@string/add_button_text" />
+                    android:text="@string/add_button_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
                 <!-- TODO: Represents purchase option Nr2 -->
                 <ImageView
@@ -196,7 +198,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_button_green"
-                    android:text="@string/add_button_text" />
+                    android:text="@string/add_button_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
                 <!-- TODO: Represents purchase option Nr3 -->
                 <ImageView
@@ -257,7 +261,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_button_green"
-                    android:text="@string/add_button_text" />
+                    android:text="@string/add_button_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
 
                 <!-- TODO: Represents purchase option Nr4 -->
                 <ImageView
@@ -318,7 +324,9 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_button_green"
-                    android:text="@string/add_button_text" />
+                    android:text="@string/add_button_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white" />
             </LinearLayout>
         </ScrollView>
 
@@ -354,7 +362,7 @@
             android:layout_marginBottom="5dp"
             android:layout_marginLeft="10dp"
             android:layout_marginRight="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/button">
+            app:layout_constraintBottom_toTopOf="@+id/order_good">
 
             <TextView
                 android:layout_width="wrap_content"
@@ -371,11 +379,13 @@
         </LinearLayout>
 
         <Button
-            android:id="@+id/button"
+            android:id="@+id/order_good"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/rounded_button_green"
             android:text="@string/order_button_text"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

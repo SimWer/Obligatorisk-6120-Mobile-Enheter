@@ -127,11 +127,13 @@
                     android:id="@+id/add_organic_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/rounded_button_green"
                     android:text="@string/add_button_text"
-                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="@+id/imageView"
-                    app:layout_constraintTop_toBottomOf="@+id/organic_currency"/>
+                    app:layout_constraintTop_toBottomOf="@+id/organic_currency" />
 
                 <ImageView
                     android:id="@+id/view_plast_pose"
@@ -192,11 +194,13 @@
                     android:id="@+id/add_plastic_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/rounded_button_green"
                     android:text="@string/add_button_text"
-                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="@id/view_plast_1"
-                    app:layout_constraintTop_toBottomOf="@+id/plastic_currency"/>
+                    app:layout_constraintTop_toBottomOf="@+id/plastic_currency" />
 
                 <ImageView
                     android:id="@+id/view_rest_pose"
@@ -255,11 +259,13 @@
                     android:id="@+id/add_rest_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/rounded_button_green"
                     android:text="@string/add_button_text"
-                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="@id/imageView"
-                    app:layout_constraintTop_toBottomOf="@+id/rest_currency"/>
+                    app:layout_constraintTop_toBottomOf="@+id/rest_currency" />
 
                 <ImageView
                     android:id="@+id/view_bin"
@@ -319,11 +325,13 @@
                     android:id="@+id/add_bin_button"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
                     android:background="@drawable/rounded_button_green"
                     android:text="@string/add_button_text"
-                    android:layout_marginTop="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
                     app:layout_constraintStart_toStartOf="@+id/bin_currency"
-                    app:layout_constraintTop_toBottomOf="@+id/bin_currency"/>
+                    app:layout_constraintTop_toBottomOf="@+id/bin_currency" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -358,7 +366,7 @@
                     android:background="@color/alt_background"
                     android:orientation="vertical"
                     app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toStartOf="@+id/button"
+                    app:layout_constraintEnd_toStartOf="@+id/order_good"
                     app:layout_constraintStart_toStartOf="parent">
 
                     <TextView
@@ -376,11 +384,13 @@
                 </LinearLayout>
 
                 <Button
-                    android:id="@+id/button"
+                    android:id="@+id/order_good"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_button_green"
                     android:text="@string/order_button_text"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white"
                     app:layout_constraintBottom_toBottomOf="parent"
                     app:layout_constraintEnd_toEndOf="parent" />
 

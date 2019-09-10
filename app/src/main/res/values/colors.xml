@@ -17,5 +17,6 @@
     <color name="alt_background">#F5F5F5</color>
     <color name="button_dismiss_primary">#FA0606</color>
     <color name="button_dismiss_clicked_primary">#B61717</color>
+    <color name="not_selected_radio_button">#CFCBCB</color>
 
 </resources>

@@ -129,48 +129,61 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:orientation="horizontal"
-                    android:gravity="center_horizontal"
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@+id/nr_of_days">
 
-                    <ToggleButton
-                        android:layout_width="64dp"
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+
                         android:layout_height="wrap_content"
-                        android:textOff="@string/mat_text_on_off"
-                        android:textOn="@string/mat_text_on_off"
+                        android:text="@string/mat_text_on_off"
+                        android:button="@null"
+                        android:background="@drawable/button_toggle"
                         android:layout_margin="0dp"/>
 
-                    <ToggleButton
-                        android:layout_width="65dp"
-                        android:layout_height="wrap_content"
-                        android:textOff="@string/papp_text_on_off"
-                        android:textOn="@string/papp_text_on_off"
-                        android:layout_margin="0dp"/>
-
-                    <ToggleButton
+                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textOff="@string/rest_text_on_off"
-                        android:textOn="@string/rest_text_on_off"
+                        android:layout_weight="1"
+                        android:text="@string/rest_text_on_off"
+                        android:button="@null"
+                        android:background="@drawable/button_toggle"
                         android:layout_margin="0dp"/>
 
-                    <ToggleButton
+                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textOff="@string/plast_text_on_off"
-                        android:textOn="@string/plast_text_on_off"
+                        android:layout_weight="1"
+
+                        android:button="@null"
+                        android:text="@string/papp_text_on_off"
+                        android:background="@drawable/button_toggle"
                         android:layout_margin="0dp"/>
 
-                    <ToggleButton
+                    <RadioButton
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textOff="@string/farleg_text_on_off"
-                        android:textOn="@string/farleg_text_on_off"
+                        android:layout_weight="1"
+
+                        android:text="@string/plast_text_on_off"
+                        android:button="@null"
+
+                        android:background="@drawable/button_toggle"
                         android:layout_margin="0dp"/>
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/farleg_text_on_off"
+                        android:button="@null"
+                        android:layout_weight="1"
+                        android:background="@drawable/button_toggle"
+                        android:layout_margin="0dp"/>
+
 
                 </RadioGroup>
-
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout

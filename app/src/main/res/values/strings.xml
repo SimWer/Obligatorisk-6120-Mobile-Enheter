@@ -2,7 +2,7 @@
     <string name="app_name">Boskartoteket</string>
     <string name="login_button_text">Login</string>
     <string name="har_du_ikke_en_bruker">Har du ikke en bruker?</string>
-    <string name="make_user">Lag en bruker</string>
+    <string name="make_user">Registrer en bruker!</string>
     <string name="only_show_dates">Jeg vil bare se tømmedatoer</string>
     <string name="username_hint">E-post</string>
     <string name="password_hint">Passord</string>
@@ -50,4 +50,8 @@
     <string name="confirm_String">Fullfør</string>
     <string name="dismiss_string">Avbryt</string>
     <string name="tommedatoar_text">Tømmedatoar</string>
+    <string name="first_name_input">Fornavn</string>
+    <string name="last_name_input">Etternavn</string>
+    <string name="address_hint">Adresse</string>
+    <string name="create_user">Opprett bruker</string>
 </resources>

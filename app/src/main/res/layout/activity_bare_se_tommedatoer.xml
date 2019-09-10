@@ -53,47 +53,42 @@
 
                 <EditText
                     android:id="@+id/searchbar_gatenamn"
-                    android:layout_width="0dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:background="@drawable/rounded_input"
-                    android:text="Gatenamn"
-                    app:layout_constraintHorizontal_weight="2"
+                    android:hint="Gatenamn"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintWidth_percent=".5"
                     app:layout_constraintTop_toTopOf="parent" />
 
                 <EditText
                     android:id="@+id/searchbar_husnummer"
                     android:layout_height="wrap_content"
-                    android:layout_width="0dp"
+                    android:layout_width="fill_parent"
                     android:background="@drawable/rounded_input"
-                    android:text="Husnummer"
-                    app:layout_constraintHorizontal_weight="2"
-                    app:layout_constraintStart_toEndOf="@id/searchbar_gatenamn"
-                    app:layout_constraintWidth_percent=".5"
-                    app:layout_constraintTop_toTopOf="parent" />
+                    android:hint="Husnummer"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/searchbar_gatenamn" />
 
                 <EditText
                     android:id="@+id/searchbar_postnummmer"
-                    android:layout_width="0dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/rounded_input"
-                    android:text="Postnummer"
-                    app:layout_constraintWidth_percent=".5"
+                    android:hint="Postnummer"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@+id/searchbar_gatenamn" />
+                    app:layout_constraintTop_toBottomOf="@+id/searchbar_husnummer" />
 
                 <EditText
                     android:id="@+id/searchbar_poststed"
-                    android:layout_width="0dp"
+                    android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="10dp"
                     android:background="@drawable/rounded_input"
-                    android:text="Poststed"
-                    app:layout_constraintWidth_percent=".5"
-                    app:layout_constraintStart_toStartOf="@id/searchbar_husnummer"
-                    app:layout_constraintTop_toBottomOf="@id/searchbar_gatenamn" />
+                    android:hint="Poststed"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/searchbar_postnummmer" />
 
             </androidx.constraintlayout.widget.ConstraintLayout>
 

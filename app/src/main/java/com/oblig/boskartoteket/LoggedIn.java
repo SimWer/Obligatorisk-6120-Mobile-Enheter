@@ -10,23 +10,26 @@ import android.view.MenuItem;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class LoggedIn extends AppCompatActivity implements BottomNavigationView.OnNavigationItemSelectedListener {
+    private Fragment fragment;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
-
+        //getSupportActionBar().hide();
         //Loading the default fragment
-        loadFragment(new HjemFragment());
 
         //Getting bottom navigation view and attaching the listener
         BottomNavigationView navigation = findViewById(R.id.nav_view);
         navigation.setOnNavigationItemSelectedListener(this);
+
+        if(savedInstanceState == null) {
+            loadFragment(new HjemFragment());
+        }
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
-        Fragment fragment = null;
 
         switch(menuItem.getItemId()) {
             case R.id.menu_dates:
@@ -51,4 +54,10 @@ public class LoggedIn extends AppCompatActivity implements BottomNavigationView.
         }
         return false;
     }
+
+    @Override
+    public void onSaveInstanceState(Bundle savedInstanceState) {
+        super.onSaveInstanceState(savedInstanceState);
+    }
+
 }

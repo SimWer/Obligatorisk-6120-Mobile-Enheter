@@ -44,4 +44,9 @@
     <string name="total_price_text">Total sum: NOK</string>
     <string name="nr_of_products_text">Tal på produktar:</string>
     <string name="order_button_text">Bestill Varene</string>
+    <string name="wrong_input">Feil brukerinformasjon</string>
+
+    <string name="register_title">Registrer ein brukar</string>
+    <string name="confirm_String">Fullfør</string>
+    <string name="dismiss_string">Avbryt</string>
 </resources>

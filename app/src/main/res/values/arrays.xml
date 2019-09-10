@@ -2,8 +2,8 @@
 <resources>
 
     <string-array name="user_simon">
-        <item>simon@usn.no</item>
-        <item>123test</item>
+        <item></item>
+        <item></item>
     </string-array>
 
 </resources>

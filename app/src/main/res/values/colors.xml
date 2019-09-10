@@ -6,10 +6,16 @@
     <color name="boskartoteketPrimary">#31C573</color>
     <color name="button_clicked_primary">#3EAA6E</color>
     <color name="input_boder">#487C8B</color>
+    <!-- Primary background color for the application -->
     <color name="backgroundPrimary">#F1FAFF</color>
     <color name="button_secondary">#7198A6</color>
     <color name="button_clicked_secondary">#5B737C</color>
     <color name="white">#fff</color>
+    <color name="black">#000</color>
+    <color name="background_color">#B7DAFF</color>
     <color name="text_color">#3d4e67</color>
     <color name="alt_background">#F5F5F5</color>
+    <color name="button_dismiss_primary">#FA0606</color>
+    <color name="button_dismiss_clicked_primary">#B61717</color>
+
 </resources>

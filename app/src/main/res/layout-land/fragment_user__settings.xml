@@ -210,10 +210,11 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:background="@color/button_secondary"
-                        android:text="minst 8 teikn"
+                        android:background="@drawable/passord_strength_info"
+                        android:text="Minst 8 teikn"
                         android:textAllCaps="true"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/password_strength_text_size" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -221,19 +222,21 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="15dp"
-                        android:background="@color/button_secondary"
+                        android:background="@drawable/passord_strength_info"
                         android:text="minst 1 tal"
                         android:textAllCaps="true"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/password_strength_text_size" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:background="@color/button_secondary"
-                        android:text="minst 1 spesialtekn"
+                        android:background="@drawable/passord_strength_info"
+                        android:text="Minst 1 spesialteikn"
                         android:textAllCaps="true"
-                        android:textColor="@color/white" />
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/password_strength_text_size" />
 
                 </LinearLayout>
 

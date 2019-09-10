@@ -8,130 +8,149 @@
         android:background="@color/backgroundPrimary"
         tools:context=".MainActivity">
 
-
-
-        <EditText
-            android:id="@+id/email_input"
-            android:layout_width="@dimen/boxWidth"
+        <ScrollView
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:autofillHints="email"
-            android:background="@drawable/rounded_input"
-            android:drawableStart="@drawable/ic_person_outline_black_24dp"
-            android:ems="10"
-            android:hint="@string/username_hint"
-            android:inputType="textEmailAddress"
-            android:elevation="@dimen/elevation_value"
-            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title_text" />
+            app:layout_constraintTop_toTopOf="parent"
+            >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingBottom="20dp">
+                        <EditText
+                            android:id="@+id/email_input"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".85"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:autofillHints="email"
+                            android:background="@drawable/rounded_input"
+                            android:drawableStart="@drawable/ic_person_outline_black_24dp"
+                            android:ems="10"
+                            android:hint="@string/username_hint"
+                            android:inputType="textEmailAddress"
+                            android:elevation="@dimen/elevation_value"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/title_text" />
 
-        <Button
-            android:id="@+id/login_button"
-            android:layout_width="@dimen/boxWidth"
-            android:layout_height="@dimen/button_height"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_button_green"
-            android:text="@string/login_button_text"
-            android:textColor="#fff"
-            android:elevation="@dimen/elevation_value"
-            android:onClick="log_in_user"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_input" />
+                        <Button
+                            android:id="@+id/login_button"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".85"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:background="@drawable/rounded_button_green"
+                            android:text="@string/login_button_text"
+                            android:textColor="#fff"
+                            android:elevation="@dimen/elevation_value"
+                            android:onClick="log_in_user"
+                            android:textAllCaps="false"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/password_input" />
 
-        <EditText
-            android:id="@+id/password_input"
-            android:layout_width="@dimen/boxWidth"
-            android:layout_height="47dp"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:autofillHints="password"
-            android:background="@drawable/rounded_input"
-            android:drawableStart="@drawable/ic_lock_outline_black_24dp"
-            android:ems="10"
-            android:hint="@string/password_hint"
-            android:elevation="@dimen/elevation_value"
-            android:inputType="textPassword"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/email_input" />
+                        <EditText
+                            android:id="@+id/password_input"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".85"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:autofillHints="password"
+                            android:background="@drawable/rounded_input"
+                            android:drawableStart="@drawable/ic_lock_outline_black_24dp"
+                            android:ems="10"
+                            android:hint="@string/password_hint"
+                            android:elevation="@dimen/elevation_value"
+                            android:inputType="textPassword"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/email_input" />
 
-        <TextView
-            android:id="@+id/title_text"
-            android:layout_width="@dimen/boxWidth"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="32dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_textview_green"
-            android:text="@string/boskartoteket_title"
-            android:textAlignment="center"
-            android:textColor="@color/white"
-            android:textSize="@dimen/text_title_size"
-            android:elevation="@dimen/elevation_value"
-            app:layout_constraintCircleRadius="@dimen/boxWidth"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                        <TextView
+                            android:id="@+id/title_text"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".85"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="32dp"
+                            android:layout_marginEnd="32dp"
+                            android:background="@drawable/rounded_textview_green"
+                            android:text="@string/boskartoteket_title"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/text_title_size"
+                            android:elevation="@dimen/elevation_value"
+                            app:layout_constraintCircleRadius="@dimen/boxWidth"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/question_label"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="64dp"
-            android:layout_marginEnd="32dp"
-            android:textSize="@dimen/message_text_size"
-            android:text="@string/har_du_ikke_en_bruker"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_button" />
+                        <TextView
+                            android:id="@+id/question_label"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="64dp"
+                            android:layout_marginEnd="32dp"
+                            android:textSize="@dimen/message_text_size"
+                            android:text="@string/har_du_ikke_en_bruker"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/login_button" />
 
-        <Button
-            android:id="@+id/make_user_button"
-            android:layout_width="@dimen/boxWidth"
-            android:layout_height="@dimen/button_height"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_button_secondary"
-            android:text="@string/make_user"
-            android:textColor="@color/white"
-            android:elevation="@dimen/elevation_value"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/question_label" />
+                        <Button
+                            android:id="@+id/register_button"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".85"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:background="@drawable/rounded_button_secondary"
+                            android:text="@string/make_user"
+                            android:textColor="@color/white"
+                            android:elevation="@dimen/elevation_value"
+                            android:textAllCaps="false"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/question_label" />
 
-        <Button
-            android:id="@+id/show_dates_button"
-            android:layout_width="@dimen/boxWidth"
-            android:layout_height="@dimen/button_height"
-            android:layout_marginStart="32dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="32dp"
-            android:background="@drawable/rounded_button_secondary"
-            android:text="@string/only_show_dates"
-            android:textColor="@color/white"
-            android:elevation="@dimen/elevation_value"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/make_user_button" />
+                        <Button
+                            android:id="@+id/show_dates_button"
+                            android:layout_width="0dp"
+                            app:layout_constraintWidth_percent=".85"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="32dp"
+                            android:layout_marginTop="16dp"
+                            android:layout_marginEnd="32dp"
+                            android:background="@drawable/rounded_button_secondary"
+                            android:text="@string/only_show_dates"
+                            android:textColor="@color/white"
+                            android:elevation="@dimen/elevation_value"
+                            android:textAllCaps="false"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/register_button" />
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="8dp"
-            android:text="@string/forgotten_password_text"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/login_button" />
-        <!-- Navigation menu - implement in every activity to have it -->
+                        <TextView
+                            android:id="@+id/textView4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="@string/forgotten_password_text"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/login_button" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </ScrollView>
 
     </androidx.constraintlayout.widget.ConstraintLayout>

@@ -129,17 +129,19 @@
             app:layout_constraintTop_toBottomOf="@+id/nr_of_days">
 
             <ToggleButton
-                android:layout_width="64dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textOff="@string/mat_text_on_off"
                 android:textOn="@string/mat_text_on_off"
+                android:background="@drawable/button_toggle"
                 android:layout_margin="0dp"/>
 
             <ToggleButton
-                android:layout_width="65dp"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textOff="@string/papp_text_on_off"
                 android:textOn="@string/papp_text_on_off"
+                android:background="@drawable/button_toggle"
                 android:layout_margin="0dp"/>
 
             <ToggleButton
@@ -147,6 +149,7 @@
                 android:layout_height="wrap_content"
                 android:textOff="@string/rest_text_on_off"
                 android:textOn="@string/rest_text_on_off"
+                android:background="@drawable/button_toggle"
                 android:layout_margin="0dp"/>
 
             <ToggleButton
@@ -154,6 +157,7 @@
                 android:layout_height="wrap_content"
                 android:textOff="@string/plast_text_on_off"
                 android:textOn="@string/plast_text_on_off"
+                android:background="@drawable/button_toggle"
                 android:layout_margin="0dp"/>
 
             <ToggleButton
@@ -161,6 +165,7 @@
                 android:layout_height="wrap_content"
                 android:textOff="@string/farleg_text_on_off"
                 android:textOn="@string/farleg_text_on_off"
+                android:background="@drawable/button_toggle"
                 android:layout_margin="0dp"/>
 
 

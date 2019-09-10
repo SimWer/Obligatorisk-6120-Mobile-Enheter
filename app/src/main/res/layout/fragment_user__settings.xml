@@ -210,9 +210,10 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:background="@color/button_secondary"
+                        android:background="@drawable/passord_strength_info"
                         android:text="minst 8 teikn"
                         android:textAllCaps="true"
+                        android:textSize="@dimen/password_strength_text_size"
                         android:textColor="@color/white" />
 
                     <TextView
@@ -221,8 +222,9 @@
                         android:layout_marginLeft="15dp"
                         android:layout_marginTop="5dp"
                         android:layout_marginRight="15dp"
-                        android:background="@color/button_secondary"
+                        android:background="@drawable/passord_strength_info"
                         android:text="minst 1 tal"
+                        android:textSize="@dimen/password_strength_text_size"
                         android:textAllCaps="true"
                         android:textColor="@color/white" />
 
@@ -230,8 +232,9 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
-                        android:background="@color/button_secondary"
+                        android:background="@drawable/passord_strength_info"
                         android:text="minst 1 spesialtekn"
+                        android:textSize="@dimen/password_strength_text_size"
                         android:textAllCaps="true"
                         android:textColor="@color/white" />
 

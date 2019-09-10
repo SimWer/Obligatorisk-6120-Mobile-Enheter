@@ -27,7 +27,7 @@ import javax.net.ssl.HttpsURLConnection;
 public class MainActivity extends AppCompatActivity{
     private EditText user_input, password_input, register_email, register_password;
     private final String MIN_ID = "boskartoteket-app-v1";
-    private Button login_button, register_button;
+    private Button login_button, register_button, show_dates_button;
     private BottomNavigationView bottomView;
     private Dialog register_dialog;
 
@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity{
         register_button = findViewById(R.id.register_button);
         register_email = findViewById(R.id.register_email);
         register_password = findViewById(R.id.register_password);
+        show_dates_button = findViewById(R.id.show_dates_button);
 
         register_button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,5 +108,10 @@ public class MainActivity extends AppCompatActivity{
         //TODO : Store in DB.
         // For now dismiss the popup
         register_dialog.dismiss();
+    }
+
+    public void show_dates_button(View view) {
+        Intent startIntent = new Intent(this, Bare_se_tommedatoer.class);
+        startActivity(startIntent);
     }
 }

@@ -49,4 +49,5 @@
     <string name="register_title">Registrer ein brukar</string>
     <string name="confirm_String">Fullfør</string>
     <string name="dismiss_string">Avbryt</string>
+    <string name="tommedatoar_text">Tømmedatoar</string>
 </resources>

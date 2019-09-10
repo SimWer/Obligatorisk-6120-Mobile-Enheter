@@ -54,4 +54,25 @@
     <string name="last_name_input">Etternavn</string>
     <string name="address_hint">Adresse</string>
     <string name="create_user">Opprett bruker</string>
+    <string name="tømme_title_text">Fyll inn din adresse for å sjå tømmedatoar for dei respektive avfallskategoriane</string>
+    <string name="gatenamn_text">Gatenamn</string>
+    <string name="husnummer_text">Husnummer</string>
+    <string name="postnummer_text">Postnummer</string>
+    <string name="poststed_text">Poststed</string>
+    <string name="tømmedatoer_text">Gullbringveien 36,   3800 Bø Telemark</string>
+    <string name="organic_waste_text">Våtorganisk avfall</string>
+    <string name="organic_date_text">Mandag 29. April</string>
+    <string name="date_text">i dag</string>
+    <string name="papp_text">Papp - og papiravfall</string>
+    <string name="papp_date_text">Mandag 6. Mai</string>
+    <string name="papp_day_text">i dag</string>
+    <string name="plastemballasje_text">Plastemballasje</string>
+    <string name="plast_date_text">Mandag 29. April</string>
+    <string name="plast_day_text">i dag</string>
+    <string name="restavfall_text">Restavfall</string>
+    <string name="rest_date_text">Mandag 29. April</string>
+    <string name="rest_day_text">i dag</string>
+    <string name="hazard_text">Farleg avfall</string>
+    <string name="hazard_date_text">Mandag 29. April</string>
+    <string name="hazard_day_text">i dag</string>
 </resources>

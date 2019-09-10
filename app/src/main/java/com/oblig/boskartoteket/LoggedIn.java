@@ -4,8 +4,10 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
@@ -39,7 +41,7 @@ public class LoggedIn extends AppCompatActivity implements BottomNavigationView.
                 fragment = new BestillingFragment();
                 break;
             case R.id.menu_settings:
-                fragment = new BrukerInnstillingFragment();
+                fragment = new User_Settings();
                 break;
         }
 
@@ -59,5 +61,10 @@ public class LoggedIn extends AppCompatActivity implements BottomNavigationView.
     public void onSaveInstanceState(Bundle savedInstanceState) {
         super.onSaveInstanceState(savedInstanceState);
     }
+
+    public void logOut(View view) {
+        finish();
+    }
+
 
 }

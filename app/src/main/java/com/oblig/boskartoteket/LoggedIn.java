@@ -18,9 +18,6 @@ public class LoggedIn extends AppCompatActivity implements BottomNavigationView.
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_logged_in);
-        //getSupportActionBar().hide();
-        //Loading the default fragment
-
         //Getting bottom navigation view and attaching the listener
         BottomNavigationView navigation = findViewById(R.id.nav_view);
         navigation.setOnNavigationItemSelectedListener(this);

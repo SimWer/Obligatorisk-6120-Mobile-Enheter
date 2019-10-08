@@ -1,12 +1,15 @@
 package com.oblig.boskartoteket;
 
+import androidx.annotation.NonNull;
+
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
-public class User {
+public class User implements Serializable {
 
     private String email, password, fNavn, eNavn, address;
 
@@ -41,8 +44,18 @@ public class User {
         this.address = address;
     }
 
+    public User(int id, String fNavn, String eNavn, String email, String password, String address) {
+        this.id = id;
+        this.fNavn = fNavn;
+        this.eNavn = eNavn;
+        this.email = email;
+        this.password = password;
+        this.address = address;
+    }
+
 
     public User(JSONObject jsonUser) {
+        this.id = jsonUser.optInt(KOL_ID);
         this.email = jsonUser.optString(KOL_EMAIL);
         this.password = jsonUser.optString(KOL_PASSWORD);
         this.fNavn = jsonUser.optString(KOL_FNAME);
@@ -50,6 +63,7 @@ public class User {
         this.address = jsonUser.optString(KOL_ADDRESS);
 
     }
+
 
     public static ArrayList<User> addToUserList(String jsonUser) throws JSONException, NullPointerException{
         ArrayList<User> userList = new ArrayList<>();
@@ -117,6 +131,9 @@ public class User {
         return eNavn;
     }
 
+    public String getAddress() {
+        return address;
+    }
 
     public int getId() {
         return id;
@@ -124,7 +141,13 @@ public class User {
 
     @Override
     public String toString() {
-        return "Email:" + email + "\n" +
-                "Password: " + password;
+        return "User{" +
+                "email='" + email + '\'' +
+                ", password='" + password + '\'' +
+                ", fNavn='" + fNavn + '\'' +
+                ", eNavn='" + eNavn + '\'' +
+                ", address='" + address + '\'' +
+                ", id=" + id +
+                '}';
     }
 }

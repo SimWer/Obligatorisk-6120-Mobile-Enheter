@@ -31,8 +31,6 @@ public class RestAdapter {
 
     static final String ENDPOINT = "https://itfag.usn.no/~216734/api.php";
 
-    static final String TABLE_USER = "User";
-    static final String TABLE_ADDRESS = "Address";
 
 
     private Context context;
@@ -49,6 +47,12 @@ public class RestAdapter {
         addJSONRequest(Request.Method.POST, userUrl, jsonUser);
     }
 
+    public void updateUser(User updateUser, int id) {
+        String userUrl = ENDPOINT + "/User_new/" + id;
+        JSONObject jsonUser = updateUser.toJSONObject();
+        addJSONRequest(Request.Method.PUT, userUrl, jsonUser);
+    }
+
 
     private void addJSONRequest(int requestMethod, String url, JSONObject data) {
         if(isOnline()) {
@@ -61,7 +65,7 @@ public class RestAdapter {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-
+                        Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
                     }
                 });
                 queue.add(jsonObjectRequest);

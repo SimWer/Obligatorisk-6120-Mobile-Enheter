@@ -29,6 +29,7 @@ import org.json.JSONException;
 
 import java.io.InputStream;
 import java.io.InputStreamReader;
+import java.io.Serializable;
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.nio.charset.StandardCharsets;
@@ -38,10 +39,11 @@ import javax.net.ssl.HttpsURLConnection;
 
 import static com.oblig.boskartoteket.RestAdapter.ENDPOINT;
 
-public class MainActivity extends AppCompatActivity implements Response.Listener<String>, Response.ErrorListener {
+public class MainActivity extends AppCompatActivity implements Response.Listener<String>, Response.ErrorListener, Serializable {
     private EditText user_input, password_input, register_email, register_password;
-    private final String MIN_ID = "boskartoteket-app-v1";
+    static final String MIN_ID = "boskartoteket-app-v1";
     private Button login_button, register_button;
+    private User loggedInUser;
 
     private ArrayList<User> userArray;
     public final static String user_list = ENDPOINT + "/User_new?transform=1";
@@ -60,8 +62,6 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         register_button = findViewById(R.id.register_button);
 
         getUserList();
-
-
     }
 
 
@@ -76,9 +76,17 @@ public class MainActivity extends AppCompatActivity implements Response.Listener
         String email = user_input.getText().toString();
         String password = password_input.getText().toString();
 
-
         if(User.isUser(email, password, userArray)) {
+
+            for(User uInArr: userArray) {
+                if(uInArr.getEmail().equals(email) && uInArr.getPassword().equals(password)) {
+                    loggedInUser = new User(uInArr.getId(), uInArr.getfNavn(), uInArr.geteNavn(), uInArr.getEmail(), uInArr.getPassword(), uInArr.getAddress());
+                    break;
+                }
+            }
+
             Intent startIntent = new Intent(this, LoggedIn.class);
+            startIntent.putExtra(MIN_ID, loggedInUser);
             startActivity(startIntent);
         } else {
             Toast.makeText(getApplicationContext(),getString(R.string.wrong_input),Toast.LENGTH_SHORT).show();

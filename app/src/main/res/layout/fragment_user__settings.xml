@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/backgroundPrimary"
-    tools:context=".LoggedIn">
+    tools:context=".User_Settings">
 
     <!-- TODO: Update blank fragment layout -->
     <ScrollView
@@ -345,11 +345,13 @@
                     app:layout_constraintTop_toBottomOf="@+id/view_postal_location" />
 
                 <Button
+                    android:id="@+id/updateButton"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="60dp"
                     android:background="@color/button_secondary"
                     android:text="@string/oppdater_innstillinger"
+                    android:onClick="changeUserInfo"
                     android:textColor="@color/white"
                     app:layout_constraintTop_toBottomOf="@+id/edit_text_postal_location"/>
 

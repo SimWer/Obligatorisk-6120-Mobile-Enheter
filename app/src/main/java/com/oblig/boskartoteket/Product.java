@@ -24,17 +24,23 @@ public class Product {
         this.price = price;
     }
 
-    public static ArrayList<User> addToUserList(String jsonUser) throws JSONException, NullPointerException{
-        ArrayList<User> userList = new ArrayList<>();
+    public Product(JSONObject jsonObject) {
+        this.id = jsonObject.optInt(KOL_ID);
+        this.name = jsonObject.optString(KOL_NAME);
+        this.price = jsonObject.optDouble(KOL_PRICE);
+    }
 
-        JSONObject jsonData = new JSONObject(jsonUser);
+    public static ArrayList<Product> addToProductList(String jsonProduct) throws JSONException, NullPointerException{
+        ArrayList<Product> userList = new ArrayList<>();
 
-        JSONArray userTable = jsonData.optJSONArray(TABLE_NAME);
+        JSONObject jsonData = new JSONObject(jsonProduct);
 
-        for(int i = 0; i < userTable.length(); i++) {
-            JSONObject userObject = (JSONObject) userTable.get(i);
-            User user = new User(userObject);
-            userList.add(user);
+        JSONArray productTable = jsonData.optJSONArray(TABLE_NAME);
+
+        for(int i = 0; i < productTable.length(); i++) {
+            JSONObject productObject = (JSONObject) productTable.get(i);
+            Product product = new Product(productObject);
+            userList.add(product);
         }
 
         return userList;

@@ -101,4 +101,6 @@
     <string name="hazard_text">Farleg avfall</string>
     <string name="hazard_date_text">Mandag 29. April</string>
     <string name="hazard_day_text">i dag</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="dropped_pin">Dropped Pin</string>
 </resources>

@@ -62,11 +62,11 @@
 
                 <EditText
                     android:id="@+id/searchbar_husnummer"
-                    android:layout_height="wrap_content"
                     android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
                     android:background="@drawable/rounded_input"
                     android:hint="@string/husnummer_text"
-                    android:layout_marginTop="10dp"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/searchbar_gatenamn" />
 
@@ -90,25 +90,41 @@
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/searchbar_postnummmer" />
 
+                <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:layout_width="match_parent"
+                    android:layout_height="300dp"
+                    android:layout_marginTop="10dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/searchbar_poststed">
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"/>
+
+                </RelativeLayout>
+
+
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="15dp"
-                android:layout_marginEnd="15dp"
-                android:layout_marginTop="60dp">
+                android:layout_marginTop="60dp"
+                android:layout_marginEnd="15dp">
 
                 <TextView
                     android:id="@+id/tømmedatoar_address_detail"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:textSize="@dimen/message_text_size"
-                    android:textColor="@color/text_color"
                     android:text="@string/tømmedatoer_text"
-                    app:layout_constraintStart_toStartOf="parent"
+                    android:textColor="@color/text_color"
+                    android:textSize="@dimen/message_text_size"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <androidx.constraintlayout.widget.ConstraintLayout
                     android:id="@+id/layout_organic"
@@ -116,28 +132,29 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@color/white"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/tømmedatoar_address_detail">
 
                     <ImageView
                         android:id="@+id/organic_image"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        app:srcCompat="@drawable/organic"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/organic" />
 
                     <TextView
                         android:id="@+id/organic_text_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/message_text_size"
                         android:layout_marginStart="20dp"
                         android:text="@string/organic_waste_text"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/organic_image"/>
+                        android:textSize="@dimen/message_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/organic_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/organic_text_2"
                         android:layout_width="wrap_content"
@@ -145,13 +162,14 @@
                         android:text="@string/organic_date_text"
                         android:textColor="@color/boskartoteketPrimary"
                         app:layout_constraintStart_toStartOf="@id/organic_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/organic_text_1"/>
+                        app:layout_constraintTop_toBottomOf="@id/organic_text_1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/date_text"
                         app:layout_constraintStart_toStartOf="@id/organic_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/organic_text_2"/>
+                        app:layout_constraintTop_toBottomOf="@id/organic_text_2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -161,28 +179,29 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@color/white"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/layout_organic">
 
                     <ImageView
                         android:id="@+id/papp_image"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        app:srcCompat="@drawable/paper"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/paper" />
 
                     <TextView
                         android:id="@+id/papp_text_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/message_text_size"
                         android:layout_marginStart="20dp"
                         android:text="@string/papp_text"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/papp_image"/>
+                        android:textSize="@dimen/message_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/papp_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/papp_text_2"
                         android:layout_width="wrap_content"
@@ -190,13 +209,14 @@
                         android:text="@string/papp_date_text"
                         android:textColor="@color/boskartoteketPrimary"
                         app:layout_constraintStart_toStartOf="@id/papp_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/papp_text_1"/>
+                        app:layout_constraintTop_toBottomOf="@id/papp_text_1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/papp_day_text"
                         app:layout_constraintStart_toStartOf="@id/papp_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/papp_text_2"/>
+                        app:layout_constraintTop_toBottomOf="@id/papp_text_2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -206,28 +226,29 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@color/white"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/layout_papp">
 
                     <ImageView
                         android:id="@+id/rest_image"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        app:srcCompat="@drawable/residual"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/residual" />
 
                     <TextView
                         android:id="@+id/rest_text_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/message_text_size"
                         android:layout_marginStart="20dp"
                         android:text="@string/restavfall_text"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/rest_image"/>
+                        android:textSize="@dimen/message_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/rest_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/rest_text_2"
                         android:layout_width="wrap_content"
@@ -235,13 +256,14 @@
                         android:text="@string/rest_date_text"
                         android:textColor="@color/boskartoteketPrimary"
                         app:layout_constraintStart_toStartOf="@id/rest_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/rest_text_1"/>
+                        app:layout_constraintTop_toBottomOf="@id/rest_text_1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/rest_day_text"
                         app:layout_constraintStart_toStartOf="@id/rest_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/rest_text_2"/>
+                        app:layout_constraintTop_toBottomOf="@id/rest_text_2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -251,28 +273,29 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@color/white"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/layout_restavfall">
 
                     <ImageView
                         android:id="@+id/plast_image"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        app:srcCompat="@drawable/plastic"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/plastic" />
 
                     <TextView
                         android:id="@+id/plast_text_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/message_text_size"
                         android:layout_marginStart="20dp"
                         android:text="@string/plastemballasje_text"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/plast_image"/>
+                        android:textSize="@dimen/message_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/plast_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/plast_text_2"
                         android:layout_width="wrap_content"
@@ -280,13 +303,14 @@
                         android:text="@string/plast_date_text"
                         android:textColor="@color/boskartoteketPrimary"
                         app:layout_constraintStart_toStartOf="@id/plast_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/plast_text_1"/>
+                        app:layout_constraintTop_toBottomOf="@id/plast_text_1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/plast_day_text"
                         app:layout_constraintStart_toStartOf="@id/plast_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/plast_text_2"/>
+                        app:layout_constraintTop_toBottomOf="@id/plast_text_2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -296,28 +320,29 @@
                     android:layout_height="wrap_content"
                     android:layout_margin="15dp"
                     android:background="@color/white"
-                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toBottomOf="@id/layout_plast">
 
                     <ImageView
                         android:id="@+id/hazard_image"
                         android:layout_width="60dp"
                         android:layout_height="60dp"
-                        app:srcCompat="@drawable/hazardous"
                         app:layout_constraintStart_toStartOf="parent"
-                        app:layout_constraintTop_toTopOf="parent"/>
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@drawable/hazardous" />
 
                     <TextView
                         android:id="@+id/hazard_text_1"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textStyle="bold"
-                        android:textSize="@dimen/message_text_size"
                         android:layout_marginStart="20dp"
                         android:text="@string/hazard_text"
-                        app:layout_constraintTop_toTopOf="parent"
-                        app:layout_constraintStart_toEndOf="@id/hazard_image"/>
+                        android:textSize="@dimen/message_text_size"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/hazard_image"
+                        app:layout_constraintTop_toTopOf="parent" />
+
                     <TextView
                         android:id="@+id/hazard_text_2"
                         android:layout_width="wrap_content"
@@ -325,13 +350,14 @@
                         android:text="@string/hazard_date_text"
                         android:textColor="@color/boskartoteketPrimary"
                         app:layout_constraintStart_toStartOf="@id/hazard_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/hazard_text_1"/>
+                        app:layout_constraintTop_toBottomOf="@id/hazard_text_1" />
+
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:text="@string/hazard_day_text"
                         app:layout_constraintStart_toStartOf="@id/hazard_text_1"
-                        app:layout_constraintTop_toBottomOf="@id/hazard_text_2"/>
+                        app:layout_constraintTop_toBottomOf="@id/hazard_text_2" />
 
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -346,11 +372,11 @@
                     style="@style/Widget.MaterialComponents.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Tilbake"
                     android:onClick="return_main"
+                    android:text="Tilbake"
                     app:icon="@drawable/ic_arrow_back"
                     app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent"/>
+                    app:layout_constraintTop_toTopOf="parent" />
 
 
             </androidx.constraintlayout.widget.ConstraintLayout>

@@ -135,6 +135,7 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_button_green"
+                    android:onClick="addToCart"
                     android:text="@string/add_button_text"
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
@@ -199,6 +200,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_button_green"
                     android:text="@string/add_button_text"
+                    android:onClick="addToCart"
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
 
@@ -263,6 +265,8 @@
                     android:background="@drawable/rounded_button_green"
                     android:text="@string/add_button_text"
                     android:textAllCaps="false"
+                    android:onClick="addToCart"
+
                     android:textColor="@color/white" />
 
                 <!-- TODO: Represents purchase option Nr4 -->
@@ -325,6 +329,7 @@
                     android:layout_gravity="center"
                     android:background="@drawable/rounded_button_green"
                     android:text="@string/add_button_text"
+                    android:onClick="addToCart"
                     android:textAllCaps="false"
                     android:textColor="@color/white" />
             </LinearLayout>
@@ -335,8 +340,9 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/shopping_cart_layout"
         android:layout_width="match_parent"
-        android:layout_height="190dp"
+        android:layout_height="wrap_content"
         android:layout_margin="10dp"
+        android:paddingBottom="50dp"
         android:background="@color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

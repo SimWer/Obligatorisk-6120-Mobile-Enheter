@@ -63,5 +63,17 @@ public class LoggedIn extends AppCompatActivity implements BottomNavigationView.
         finish();
     }
 
+    public void addToCart(View view) {
+        int id = view.getId();
+
+        switch (id) {
+            case R.id.add_bin_button: break;
+            case R.id.add_organic_button: break;
+            case R.id.add_plastic_button: break;
+            case R.id.add_rest_button: break;
+            default: break;
+        }
+    }
+
 
 }

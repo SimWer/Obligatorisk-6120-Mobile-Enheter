@@ -58,30 +58,13 @@ public class Address {
 
     }
 
-    public static ArrayList<Address> addToAddressList(JSONArray jsonAddress) throws JSONException{
-        ArrayList<Address> addressArrayList = new ArrayList<>();
-
-
-        for(int i = 0; i < jsonAddress.length(); i++) {
-            JSONObject addressObject = (JSONObject) jsonAddress.get(i);
-            Address address = new Address(addressObject);
-            addressArrayList.add(address);
-        }
-
-        return addressArrayList;
-
-    }
 
     @Override
     public String toString() {
-        return "Address{" +
-                "name='" + name + '\'' +
-                ", house_number='" + house_number + '\'' +
-                ", letter='" + letter + '\'' +
-                ", zip_code='" + zip_code + '\'' +
-                ", postal_location='" + postal_location + '\'' +
-                ", route_id='" + route_id + '\'' +
-                ", id=" + id +
-                '}';
+        return  name + ' ' +
+                house_number + ' ' +
+                letter + ' ' +
+                zip_code + ' ' +
+                postal_location;
     }
 }

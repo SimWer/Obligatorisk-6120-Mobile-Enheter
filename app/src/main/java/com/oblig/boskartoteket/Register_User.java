@@ -8,22 +8,17 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.AutoCompleteTextView;
 import android.widget.EditText;
-import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
-import com.android.volley.toolbox.JsonObjectRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 
-import org.json.JSONArray;
 import org.json.JSONException;
-import org.json.JSONObject;
 
 import java.util.ArrayList;
-import java.util.List;
 
 
 public class Register_User extends AppCompatActivity {
@@ -33,6 +28,8 @@ public class Register_User extends AppCompatActivity {
     private User user;
     private RestAdapter restAdapter;
     private RequestQueue requestQueue;
+    private final String url = "https://itfag.usn.no/~216734/api.php/Address?transform=1";
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +45,7 @@ public class Register_User extends AppCompatActivity {
         addressRegister = findViewById(R.id.address_register);
         requestQueue = Volley.newRequestQueue(this);
 
-        jsonParse(this);
+        dropDownSearch(this);
 
 
     }
@@ -81,101 +78,38 @@ public class Register_User extends AppCompatActivity {
         finish();
     }
 
-    private void jsonParse(final Context context) {
+    /***
+     *
+     * Metode for å søke opp adresser når du registrerer bruker, den tar i mot søkeparameter og i "real-time" oppdaterer fra en liste med Addresse-objekter
+     *
+     */
 
-        String url = "https://itfag.usn.no/~216734/api.php/Address";
-        
-        JsonObjectRequest request = new JsonObjectRequest(Request.Method.GET, url, null, new Response.Listener<JSONObject>() {
+
+    private void dropDownSearch(final Context context) {
+
+
+        StringRequest request =  new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
-            public void onResponse(JSONObject response) {
+            public void onResponse(String response) {
                 try {
-                    JSONObject jsonObject = response.getJSONObject("Address");
-                    JSONArray jsonArray = jsonObject.getJSONArray("records");
-                    List<Address> list = new ArrayList<>();
 
-                    String address = "";
+                    ArrayList<Address> addressList = Address.addToAddressList(response);
 
-                    String tempName, tempNumber, tempLetter, tempAddress = null;
+                    addressRegister.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_dropdown_item_1line, addressList));
 
-                    String[] tempArray = new String[0];
 
-                    for (int i = 0; i < jsonArray.length(); i++) {
-
-                        address = jsonArray.getString(i);
-
-                        list = Address.addToAddressList(address);
-
-                        /*tempArray = address.split(",");
-
-                        for (int j = 0; j < tempArray.length; j++) {
-                            tempName    = tempArray[1];
-                            tempNumber  = tempArray[2];
-                            tempLetter  = tempArray[3];
-                            tempAddress = tempName + " " + tempNumber + " " + tempLetter;
-                        }
-                        list.add(tempAddress);*/
-                    }
-
-                    addressRegister.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_dropdown_item_1line, list));
-
-                } catch (JSONException e) {
+                }catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
         }, new Response.ErrorListener() {
             @Override
             public void onErrorResponse(VolleyError error) {
-
+                error.printStackTrace();
             }
         });
 
         requestQueue.add(request);
     }
-    
-    /*private void jsonParse2(final Context context) {
-        // Request a string response from the provided URL.
-        String url = "https://itfag.usn.no/~216734/api.php/Address";
-        
-        StringRequest stringRequest = new StringRequest(Request.Method.GET, url,
-                new Response.Listener<String>() {
-                    @Override
-                    public void onResponse(String response) {
 
-                        JSONObject jsonObject = response.getJSONObject("Address");
-                        JSONArray jsonArray = jsonObject.getJSONArray("records");
-                        List<Address> list = new ArrayList<>();
-
-                        String address = "";
-
-                        String tempName, tempNumber, tempLetter, tempAddress = null;
-
-                        String[] tempArray = new String[0];
-
-                        for (int i = 0; i < jsonArray.length(); i++) {
-
-                            address = jsonArray.getString(i);
-
-                            list = Address.addToAddressList(address);
-
-                        *//*tempArray = address.split(",");
-
-                        for (int j = 0; j < tempArray.length; j++) {
-                            tempName    = tempArray[1];
-                            tempNumber  = tempArray[2];
-                            tempLetter  = tempArray[3];
-                            tempAddress = tempName + " " + tempNumber + " " + tempLetter;
-                        }
-                        list.add(tempAddress);*//*
-                        }
-
-                        addressRegister.setAdapter(new ArrayAdapter<>(context, android.R.layout.simple_dropdown_item_1line, list));
-                        
-                    }
-                }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                
-            }
-        });
-    }*/
 }

@@ -65,7 +65,7 @@ public class RestAdapter {
                 }, new Response.ErrorListener() {
                     @Override
                     public void onErrorResponse(VolleyError error) {
-                        Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
+                        //Toast.makeText(context, "Something went wrong", Toast.LENGTH_SHORT).show();
                     }
                 });
                 queue.add(jsonObjectRequest);

@@ -58,13 +58,12 @@ public class Address {
 
     }
 
-    public static ArrayList<Address> addToAddressList(JSONObject jsonAddress) throws JSONException{
+    public static ArrayList<Address> addToAddressList(JSONArray jsonAddress) throws JSONException{
         ArrayList<Address> addressArrayList = new ArrayList<>();
 
-        JSONArray addressTable = jsonAddress.optJSONArray(TABLE_NAME);
 
-        for(int i = 0; i < addressTable.length(); i++) {
-            JSONObject addressObject = (JSONObject) addressTable.get(i);
+        for(int i = 0; i < jsonAddress.length(); i++) {
+            JSONObject addressObject = (JSONObject) jsonAddress.get(i);
             Address address = new Address(addressObject);
             addressArrayList.add(address);
         }

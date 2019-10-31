@@ -98,7 +98,7 @@
         app:layout_constraintTop_toBottomOf="@+id/email_register"
         app:layout_constraintWidth_percent=".85" />
 
-    <EditText
+    <AutoCompleteTextView
         android:id="@+id/address_register"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -114,7 +114,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password_register"
-        app:layout_constraintWidth_percent=".85" />
+        app:layout_constraintWidth_percent=".85"/>
 
     <Button
         android:id="@+id/button_confirm_register"
